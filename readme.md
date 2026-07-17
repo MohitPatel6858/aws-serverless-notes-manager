@@ -18,7 +18,6 @@ A **Serverless Notes Manager** built using **Amazon API Gateway, AWS Lambda, Ama
 
 ## 🏗️ AWS Architecture
 
-> *(Replace this image with your architecture diagram once uploaded.)*
 
 <img width="1536" height="1024" alt="architecture" src="https://github.com/user-attachments/assets/bc8e270d-8929-4e3d-bd25-c82efab999e9" />
 
