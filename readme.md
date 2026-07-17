@@ -20,7 +20,9 @@ A **Serverless Notes Manager** built using **Amazon API Gateway, AWS Lambda, Ama
 
 > *(Replace this image with your architecture diagram once uploaded.)*
 
-![Architecture](architecture.png)
+<p align="center">
+  <img src="./architecture.png" alt="AWS File Type Validation API Architecture" width="100%">
+</p>
 
 ---
 
