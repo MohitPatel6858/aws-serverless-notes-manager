@@ -1,85 +1,43 @@
 # 📒 AWS Serverless Notes Manager
 
-A modern serverless web application built on **AWS** that allows users to create and retrieve notes using REST APIs. The application demonstrates how **Amazon API Gateway**, **AWS Lambda**, **Amazon S3**, and **Amazon CloudWatch** work together to build a scalable backend without managing servers.
+A serverless web application built using **Amazon API Gateway**, **AWS Lambda**, **Amazon S3**, and **Amazon CloudWatch**. This project allows users to create and retrieve notes through REST APIs while demonstrating a complete serverless architecture on AWS.
 
 ---
 
-## 📌 Project Overview
+## 🚀 Features
 
-The application provides a simple web interface where users can:
-
-- 📝 Create a note
-- ☁️ Store the note as a `.txt` file in Amazon S3
-- 📖 Retrieve any saved note
-- 📊 Monitor API requests through CloudWatch Logs
-
-This project demonstrates a real-world **Serverless Architecture** using AWS managed services.
-
----
-
-# 🚀 Live Features
-
-- ✅ Create Notes
-- ✅ Read Notes
-- ✅ Store notes in Amazon S3
-- ✅ Retrieve notes from Amazon S3
-- ✅ REST API using API Gateway
-- ✅ AWS Lambda backend
-- ✅ CloudWatch request logging
-- ✅ Responsive Frontend
-- ✅ Serverless Architecture
+- 📝 Create notes using **POST /note**
+- 📖 Read notes using **GET /note**
+- ☁️ Store notes as text files in **Amazon S3**
+- ⚡ Serverless backend using **AWS Lambda**
+- 🌐 REST APIs with **Amazon API Gateway**
+- 📊 Request and error logging with **CloudWatch**
+- 💻 Responsive frontend using HTML, CSS & JavaScript
 
 ---
 
-# 🏗️ System Architecture
+## 🏗️ Architecture
 
-```
-                +----------------------+
-                |      Frontend        |
-                | HTML • CSS • JS      |
-                +----------+-----------+
-                           |
-                           |
-                    HTTP Request
-                           |
-                           ▼
-                +----------------------+
-                | Amazon API Gateway   |
-                +----------+-----------+
-                           |
-                           ▼
-                +----------------------+
-                |     AWS Lambda       |
-                |   Python Function    |
-                +----------+-----------+
-                           |
-              +------------+------------+
-              |                         |
-              ▼                         ▼
-     +----------------+        +--------------------+
-     |   Amazon S3    |        | Amazon CloudWatch  |
-     | Store Notes    |        | Logs & Monitoring  |
-     +----------------+        +--------------------+
-```
+![AWS Architecture](images/architecture.png)
 
 ---
 
-# 🛠️ AWS Services Used
+## 🛠️ AWS Services Used
 
 | AWS Service | Purpose |
 |-------------|---------|
-| Amazon API Gateway | Exposes REST API endpoints |
+| Amazon API Gateway | Handles REST API requests |
 | AWS Lambda | Executes backend logic |
-| Amazon S3 | Stores notes as text files |
+| Amazon S3 | Stores note files |
 | Amazon CloudWatch | Logs API requests and errors |
 
 ---
 
-# 💻 Technology Stack
+## 💻 Technology Stack
 
 - HTML5
 - CSS3
-- JavaScript (ES6)
+- JavaScript
 - Python
 - AWS Lambda
 - Amazon API Gateway
@@ -90,18 +48,19 @@ This project demonstrates a real-world **Serverless Architecture** using AWS man
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
-```
+```text
 aws-serverless-notes-manager/
 │
 ├── images/
+│   ├── architecture.png
 │   ├── home-page.png
 │   ├── save-note-success.png
 │   ├── read-note-success.png
 │   ├── s3-bucket.png
 │   ├── cloudwatch-logs.png
-│   └── architecture.png
+│   └── lambda-function.png
 │
 ├── index.html
 ├── style.css
@@ -111,87 +70,41 @@ aws-serverless-notes-manager/
 
 ---
 
-# 📡 API Endpoints
+## 📡 API Endpoints
 
-## Create Note
+### Create Note
 
 **POST** `/note`
 
-### Request
-
 ```json
 {
-    "filename": "meeting.txt",
-    "content": "Prepare AWS presentation."
-}
-```
-
-### Success Response
-
-```json
-{
-    "message": "Note saved successfully."
+  "filename": "meeting.txt",
+  "content": "Prepare AWS presentation."
 }
 ```
 
 ---
 
-## Read Note
+### Read Note
 
 **GET** `/note?filename=meeting.txt`
 
-### Success Response
-
-```json
-{
-    "filename": "meeting.txt",
-    "content": "Prepare AWS presentation."
-}
-```
-
 ---
 
-# 🔄 Application Workflow
+## 🔄 Workflow
 
-### Step 1
-
-The user enters a filename and note content from the web interface.
-
-↓
-
-### Step 2
-
-The frontend sends an HTTP request to Amazon API Gateway.
-
-↓
-
-### Step 3
-
-API Gateway invokes the AWS Lambda function.
-
-↓
-
-### Step 4
-
-Lambda validates the request.
-
-↓
-
-### Step 5
-
-The note is stored or retrieved from Amazon S3.
-
-↓
-
-### Step 6
-
-CloudWatch automatically records every request and error.
-
-↓
-
-### Step 7
-
-The response is displayed back to the user.
+```
+Frontend
+      │
+      ▼
+Amazon API Gateway
+      │
+      ▼
+ AWS Lambda
+   │        │
+   ▼        ▼
+Amazon S3  CloudWatch
+```
 
 ---
 
@@ -199,17 +112,17 @@ The response is displayed back to the user.
 
 ## 🏠 Home Page
 
-![home](images/Screenshot 2026-07-17 092049.png)
+![Home Page](images/home-page.png)
 
 ---
 
-## 📝 Create Note Successfully
+## 📝 Save Note Successfully
 
-![Create Note](images/save-note-success.png)
+![Save Note](images/save-note-success.png)
 
 ---
 
-## 📖 Retrieve Note Successfully
+## 📖 Read Note Successfully
 
 ![Read Note](images/read-note-success.png)
 
@@ -217,7 +130,7 @@ The response is displayed back to the user.
 
 ## ☁️ Amazon S3 Bucket
 
-![Amazon S3](images/s3-bucket.png)
+![S3 Bucket](images/s3-bucket.png)
 
 ---
 
@@ -227,120 +140,41 @@ The response is displayed back to the user.
 
 ---
 
-## 🏗️ AWS Architecture
+## ⚙️ AWS Lambda Function
 
-![Architecture](images/architecture.png)
-
----
-
-# 🎯 Key Learning Outcomes
-
-Through this project, I learned:
-
-- Building REST APIs with Amazon API Gateway
-- Writing backend logic using AWS Lambda
-- Using Amazon S3 for object storage
-- Monitoring applications with Amazon CloudWatch
-- Integrating frontend with serverless backend
-- Handling HTTP GET and POST requests
-- Working with JSON data
-- Building scalable serverless applications
+![Lambda Function](images/lambda-function.png)
 
 ---
 
-# 📈 Future Enhancements
+## 🎯 Learning Outcomes
 
-- User Authentication (Amazon Cognito)
-- Update Existing Notes
-- Delete Notes
+- Developed REST APIs using Amazon API Gateway
+- Implemented backend logic with AWS Lambda
+- Stored and retrieved files from Amazon S3
+- Monitored application logs using CloudWatch
+- Integrated a frontend with AWS serverless services
+- Gained practical experience with Serverless Architecture
+
+---
+
+## 🚀 Future Enhancements
+
+- User Authentication
+- Edit & Delete Notes
 - Search Notes
 - DynamoDB Integration
-- File Upload Support
-- Responsive Dark Mode
-- Note Categories
-- User Dashboard
+- Dark Mode Support
 
 ---
 
-# ⚙️ Setup Instructions
-
-### Clone Repository
-
-```bash
-git clone https://github.com/MohitPatel6858/aws-serverless-notes-manager.git
-```
-
----
-
-### Navigate into Project
-
-```bash
-cd aws-serverless-notes-manager
-```
-
----
-
-### Configure API Endpoint
-
-Open `script.js`
-
-Replace
-
-```javascript
-const API_BASE_URL = "YOUR_API_GATEWAY_URL";
-```
-
-with your deployed API Gateway endpoint.
-
----
-
-### Run
-
-Simply open
-
-```
-index.html
-```
-
-in your browser.
-
----
-
-# 📚 Concepts Demonstrated
-
-- Serverless Computing
-- REST API
-- Event-Driven Architecture
-- Cloud Storage
-- Object Storage
-- Logging & Monitoring
-- Frontend & Backend Integration
-- AWS Cloud Services
-
----
-
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Mohit Patel**
 
 B.Tech – Artificial Intelligence & Machine Learning (AIML)
 
-### Currently Learning
-
-- AWS Cloud
-- Java
-- Backend Development
-- REST APIs
-- Git & GitHub
-
-**GitHub**
-
-https://github.com/MohitPatel6858
+🌐 GitHub: https://github.com/MohitPatel6858
 
 ---
 
-# ⭐ Support
-
-If you found this project helpful, please consider giving it a ⭐ on GitHub.
-
-It motivates me to build more AWS and Cloud projects.
+⭐ **If you like this project, don't forget to Star the repository!**
