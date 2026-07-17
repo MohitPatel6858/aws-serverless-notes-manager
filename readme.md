@@ -1,72 +1,52 @@
 # 📒 AWS Serverless Notes Manager
 
-A serverless web application built using **Amazon API Gateway**, **AWS Lambda**, **Amazon S3**, and **Amazon CloudWatch**. This project allows users to create and retrieve notes through REST APIs while demonstrating a complete serverless architecture on AWS.
+A **Serverless Notes Manager** built using **Amazon API Gateway, AWS Lambda, Amazon S3, and Amazon CloudWatch**. This project demonstrates how AWS serverless services work together to build a scalable REST API for creating and retrieving notes without managing any servers.
 
 ---
 
 ## 🚀 Features
 
-- 📝 Create notes using **POST /note**
-- 📖 Read notes using **GET /note**
+- 📝 Create notes using **POST API**
+- 📖 Read notes using **GET API**
 - ☁️ Store notes as text files in **Amazon S3**
 - ⚡ Serverless backend using **AWS Lambda**
 - 🌐 REST APIs with **Amazon API Gateway**
-- 📊 Request and error logging with **CloudWatch**
-- 💻 Responsive frontend using HTML, CSS & JavaScript
+- 📊 Monitor API requests using **Amazon CloudWatch**
+- 💻 Responsive frontend built with **HTML, CSS & JavaScript**
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ AWS Architecture
 
-![AWS Architecture](images/architecture.png)
+> *(Replace this image with your architecture diagram once uploaded.)*
+
+![Architecture](architecture.png)
 
 ---
 
 ## 🛠️ AWS Services Used
 
-| AWS Service | Purpose |
-|-------------|---------|
-| Amazon API Gateway | Handles REST API requests |
+| Service | Purpose |
+|---------|---------|
+| Amazon API Gateway | Exposes REST API endpoints |
 | AWS Lambda | Executes backend logic |
-| Amazon S3 | Stores note files |
-| Amazon CloudWatch | Logs API requests and errors |
+| Amazon S3 | Stores notes as text files |
+| Amazon CloudWatch | Logs requests and errors |
 
 ---
 
-## 💻 Technology Stack
+## 💻 Tech Stack
 
 - HTML5
 - CSS3
 - JavaScript
 - Python
-- AWS Lambda
 - Amazon API Gateway
+- AWS Lambda
 - Amazon S3
 - Amazon CloudWatch
 - Git
 - GitHub
-
----
-
-## 📂 Project Structure
-
-```text
-aws-serverless-notes-manager/
-│
-├── images/
-│   ├── architecture.png
-│   ├── home-page.png
-│   ├── save-note-success.png
-│   ├── read-note-success.png
-│   ├── s3-bucket.png
-│   ├── cloudwatch-logs.png
-│   └── lambda-function.png
-│
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
 
 ---
 
@@ -83,15 +63,13 @@ aws-serverless-notes-manager/
 }
 ```
 
----
-
 ### Read Note
 
 **GET** `/note?filename=meeting.txt`
 
 ---
 
-## 🔄 Workflow
+## 🔄 Project Workflow
 
 ```
 Frontend
@@ -112,57 +90,53 @@ Amazon S3  CloudWatch
 
 ## 🏠 Home Page
 
-![Home Page](images/home-page.png)
+<img width="1134" alt="Home Page" src="https://github.com/user-attachments/assets/cf37bea0-964b-40c5-83c5-86eeac39ecec" />
 
 ---
 
 ## 📝 Save Note Successfully
 
-![Save Note](images/save-note-success.png)
-
----
-
-## 📖 Read Note Successfully
-
-![Read Note](images/read-note-success.png)
+<img width="1112" alt="Save Note" src="https://github.com/user-attachments/assets/0063da9f-347f-4ad2-b21c-5c48810534e7" />
 
 ---
 
 ## ☁️ Amazon S3 Bucket
 
-![S3 Bucket](images/s3-bucket.png)
+<img width="1544" alt="Amazon S3 Bucket" src="https://github.com/user-attachments/assets/be63c30a-b108-433e-a3c0-cc338be7a18f" />
 
 ---
 
 ## 📊 CloudWatch Logs
 
-![CloudWatch Logs](images/cloudwatch-logs.png)
+<img width="1622" alt="CloudWatch Logs" src="https://github.com/user-attachments/assets/4a6486d5-8c2b-43eb-b708-0c55317e84db" />
 
 ---
 
 ## ⚙️ AWS Lambda Function
 
-![Lambda Function](images/lambda-function.png)
+<img width="706" alt="Lambda Function" src="https://github.com/user-attachments/assets/ca009f1d-5a9b-433c-b9c7-71bdcaf9c537" />
 
 ---
 
 ## 🎯 Learning Outcomes
 
-- Developed REST APIs using Amazon API Gateway
-- Implemented backend logic with AWS Lambda
-- Stored and retrieved files from Amazon S3
-- Monitored application logs using CloudWatch
-- Integrated a frontend with AWS serverless services
-- Gained practical experience with Serverless Architecture
+Through this project, I learned:
+
+- Building REST APIs using Amazon API Gateway
+- Developing serverless applications with AWS Lambda
+- Storing and retrieving files from Amazon S3
+- Monitoring applications using Amazon CloudWatch
+- Integrating frontend applications with AWS services
+- Understanding Serverless Architecture
 
 ---
 
-## 🚀 Future Enhancements
+## 🚀 Future Improvements
 
 - User Authentication
 - Edit & Delete Notes
-- Search Notes
-- DynamoDB Integration
+- Search Functionality
+- Amazon DynamoDB Integration
 - Dark Mode Support
 
 ---
@@ -171,10 +145,16 @@ Amazon S3  CloudWatch
 
 **Mohit Patel**
 
-B.Tech – Artificial Intelligence & Machine Learning (AIML)
+**B.Tech – Artificial Intelligence & Machine Learning (AIML)**
 
-🌐 GitHub: https://github.com/MohitPatel6858
+Currently Learning:
+- AWS Cloud
+- Java
+- REST APIs
+- Git & GitHub
+
+GitHub: **https://github.com/MohitPatel6858**
 
 ---
 
-⭐ **If you like this project, don't forget to Star the repository!**
+⭐ **If you found this project useful, please consider giving it a Star!**
