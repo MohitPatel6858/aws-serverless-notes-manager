@@ -199,7 +199,7 @@ The response is displayed back to the user.
 
 ## 🏠 Home Page
 
-![Home Page](images/home-page.png)
+(images/Screenshot 2026-07-17 092049.png)
 
 ---
 
