@@ -21,9 +21,9 @@
 
 AWS Serverless Notes Manager is a **Serverless Note Management Application** built using **Amazon API Gateway**, **AWS Lambda**, **Amazon S3**, and **Amazon CloudWatch**.
 
-The application allows users to create and retrieve notes through a responsive web interface without managing any servers. Notes are securely stored as text files in Amazon S3 while AWS Lambda handles all backend operations. Amazon CloudWatch monitors requests and Lambda execution for debugging and performance tracking.
+The application enables users to create and retrieve notes through a modern web interface without managing any servers. Notes are securely stored as text files in Amazon S3, while AWS Lambda processes all API requests. Amazon CloudWatch monitors application logs and Lambda execution, making the application scalable, reliable, and easy to maintain.
 
-This project demonstrates how multiple AWS serverless services can be integrated to build a scalable, cost-effective, and fully serverless REST API application.
+This project demonstrates how AWS serverless services can be integrated to build a fully serverless REST API application.
 
 ---
 
@@ -31,7 +31,7 @@ This project demonstrates how multiple AWS serverless services can be integrated
 
 ### 🌐 Website
 
-**https://YOUR-S3-WEBSITE-LINK**
+**http://aws-serverless-notes-manager.s3-website.ap-south-1.amazonaws.com**
 
 ---
 
@@ -49,7 +49,7 @@ This project demonstrates how multiple AWS serverless services can be integrated
 - ⚡ Serverless Backend using AWS Lambda
 - 🌐 REST API with Amazon API Gateway
 - 📊 CloudWatch Monitoring & Logging
-- 📱 Responsive User Interface
+- 🎨 Responsive User Interface
 - 🚀 Fast & Scalable Architecture
 
 ---
@@ -78,7 +78,7 @@ This project demonstrates how multiple AWS serverless services can be integrated
 
 | Service | Purpose |
 |---------|---------|
-| Amazon S3 | Store Notes & Static Website Hosting |
+| Amazon S3 | Static Website Hosting & Note Storage |
 | Amazon API Gateway | REST API Communication |
 | AWS Lambda | Backend Business Logic |
 | Amazon CloudWatch | Monitoring & Logging |
@@ -88,7 +88,7 @@ This project demonstrates how multiple AWS serverless services can be integrated
 
 # 🌐 Amazon S3
 
-Amazon S3 is used for two purposes:
+Amazon S3 is used for two primary purposes:
 
 - Static Website Hosting
 - Secure Storage of Notes as Text Files
@@ -99,24 +99,27 @@ Amazon S3 is used for two purposes:
 
 # 🚪 Amazon API Gateway
 
-Amazon API Gateway exposes REST APIs for the frontend application and invokes AWS Lambda functions.
+Amazon API Gateway acts as the entry point for the application and exposes REST APIs that communicate with the AWS Lambda function.
 
 ### REST APIs
 
 - POST `/note`
 - GET `/note`
 
+<img src="https://github.com/user-attachments/assets/ffeb40aa-7db6-4da0-b1cf-f3e688014602">
+
 ---
 
 # ⚡ AWS Lambda
 
-The Lambda function performs all backend operations.
+The AWS Lambda function handles all backend processing for the application.
 
 ### Responsibilities
 
 - Receive API Requests
-- Validate Input
-- Save Notes to Amazon S3
+- Validate User Input
+- Process GET and POST Requests
+- Store Notes in Amazon S3
 - Retrieve Notes from Amazon S3
 - Return JSON Responses
 - Handle Errors
@@ -127,7 +130,7 @@ The Lambda function performs all backend operations.
 
 # 📊 Amazon CloudWatch
 
-Amazon CloudWatch captures Lambda execution logs, API requests, and application errors for monitoring and debugging.
+Amazon CloudWatch monitors Lambda execution, stores application logs, records API activity, and helps debug runtime errors.
 
 <img src="https://github.com/user-attachments/assets/671c51be-8ab9-41b1-8096-c421adbfb5c6">
 
@@ -160,7 +163,7 @@ API Response
 
 ↓
 
-Display Note to User
+Display Result to User
 ```
 
 ---
@@ -179,9 +182,9 @@ Display Note to User
 
 ### AWS Cloud
 
+- Amazon S3
 - Amazon API Gateway
 - AWS Lambda
-- Amazon S3
 - Amazon CloudWatch
 - AWS IAM
 
@@ -204,7 +207,7 @@ AWS-Serverless-Notes-Manager/
 
 # 📚 API Response
 
-## Create Note
+## 📝 Create Note
 
 ```json
 {
@@ -212,7 +215,7 @@ AWS-Serverless-Notes-Manager/
 }
 ```
 
-## Read Note
+## 📖 Read Note
 
 ```json
 {
@@ -232,7 +235,7 @@ This project helped me gain practical experience in:
 - AWS Lambda
 - Amazon S3 Object Storage
 - Amazon CloudWatch Monitoring
-- IAM Roles & Permissions
+- IAM Roles & Policies
 - REST API Development
 - HTTP GET & POST Methods
 - Static Website Hosting
@@ -246,9 +249,9 @@ This project helped me gain practical experience in:
 - 🗑️ Delete Notes
 - 🔍 Search Notes by Filename
 - 🔐 User Authentication using Amazon Cognito
-- 🗃️ Store Metadata in Amazon DynamoDB
-- 🌙 Dark Mode
-- 📱 Enhanced Mobile Responsiveness
+- 🗃️ Store Note Metadata in Amazon DynamoDB
+- 🌙 Dark Mode Support
+- 📱 Improved Mobile Responsiveness
 
 ---
 
