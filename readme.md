@@ -1,4 +1,4 @@
-<img width="1536" height="1024" alt="aws-serverless-notes-manager architecture" src="https://github.com/user-attachments/assets/771a295c-c58e-43c0-8da1-579f580d66b5" /># 📒 AWS Serverless Notes Manager
+# 📒 AWS Serverless Notes Manager
 
 A **Serverless Notes Manager** built using **AWS Lambda**, **Amazon API Gateway**, **Amazon S3**, and **Amazon CloudWatch**. This project demonstrates how AWS serverless services work together to build a scalable REST API that allows users to create and retrieve notes without managing any servers.
 
@@ -11,8 +11,8 @@ A **Serverless Notes Manager** built using **AWS Lambda**, **Amazon API Gateway*
 - ☁️ Store notes securely in **Amazon S3**
 - ⚡ Serverless backend powered by **AWS Lambda**
 - 🌐 REST API using **Amazon API Gateway**
-- 📊 Monitor API requests and execution logs using **Amazon CloudWatch**
-- 🎨 Responsive and modern frontend
+- 📊 Monitor API requests using **Amazon CloudWatch**
+- 🎨 Responsive and modern frontend built with **HTML, CSS & JavaScript**
 - 🚀 Fast, scalable, and fully serverless architecture
 
 ---
@@ -20,14 +20,17 @@ A **Serverless Notes Manager** built using **AWS Lambda**, **Amazon API Gateway*
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - HTML5
 - CSS3
 - JavaScript
 
 ### Backend
+
 - Python
 
 ### AWS Services
+
 - Amazon API Gateway
 - AWS Lambda
 - Amazon S3
@@ -99,11 +102,11 @@ AWS-Serverless-Notes-Manager/
 1. User enters a filename and note content in the web application.
 2. The frontend sends a **POST** or **GET** request to **Amazon API Gateway**.
 3. API Gateway invokes the **AWS Lambda** function.
-4. Lambda processes the request.
+4. Lambda processes the request based on the HTTP method.
 5. For **POST**, the note is stored as a text file in **Amazon S3**.
-6. For **GET**, Lambda retrieves the requested note from **Amazon S3**.
-7. **Amazon CloudWatch** records request logs, execution details, and errors.
-8. The API returns the response to the frontend for display.
+6. For **GET**, the requested note is retrieved from **Amazon S3**.
+7. **Amazon CloudWatch** records API requests, Lambda execution details, and errors.
+8. The API response is returned to the frontend and displayed to the user.
 
 ---
 
@@ -131,12 +134,12 @@ AWS-Serverless-Notes-Manager/
 # 🎯 Learning Outcomes
 
 - Building REST APIs using Amazon API Gateway
-- Creating AWS Lambda functions
+- Creating serverless applications with AWS Lambda
 - Storing and retrieving text files from Amazon S3
-- Implementing serverless architecture
-- Monitoring and debugging applications with Amazon CloudWatch
+- Monitoring and debugging applications using Amazon CloudWatch
 - Connecting frontend applications with AWS services
 - Working with HTTP GET and POST methods
+- Understanding Serverless Architecture
 
 ---
 
@@ -148,7 +151,7 @@ AWS-Serverless-Notes-Manager/
 - 🔐 User Authentication using Amazon Cognito
 - 🗃️ Store note metadata in Amazon DynamoDB
 - 🌙 Dark Mode support
-- 📱 Enhanced mobile responsiveness
+- 📱 Improved mobile responsiveness
 
 ---
 
